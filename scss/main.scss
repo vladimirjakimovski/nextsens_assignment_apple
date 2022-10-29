@@ -70,40 +70,13 @@ body {
     z-index: 10;
   }
 }
-/* Hero section */
-
-.form-control {
-  background-color: $dark;
-  border-radius: 0;
-  border: 0;
-}
-
-.form-control:focus {
-  color: white;
-  background-color: $dark;
-  // border-color: #b0b8fd;
-  outline: 0;
-  box-shadow: 0 0 0 0.15rem rgb(97 113 250 / 25%);
-}
-
-.btn-primary {
-  color: white;
-}
-
-.jumbotron {
-  background-color: $dark !important;
-  padding: 50px 0;
-}
-
-.dropdown-menu[data-bs-popper] {
-  left: -100px;
-}
 
 #add-cart {
   width: 200px;
 }
 
-button#add-cart:hover {
+button#add-cart:hover,
+.btn:hover {
   animation: pulse 1s infinite;
   transition: 0.3s;
 }
@@ -135,6 +108,37 @@ button#add-cart:hover {
   opacity: 0.2;
 }
 
+.dropdown-menu[data-bs-popper] {
+  left: -100px;
+}
+
+/* Hero section */
+
+// Form
+.form-control {
+  background-color: $dark;
+  border-radius: 0;
+  border: 0;
+}
+
+.form-control:focus {
+  color: white;
+  background-color: $dark;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgb(97 113 250 / 25%);
+}
+
+.btn-primary {
+  color: white;
+}
+
+.jumbotron {
+  background-color: $dark !important;
+  padding: 50px 0;
+}
+
+// Gallery
+
 .grid-image-1 {
   background-image: url('/img/1.jfif');
 }
@@ -157,6 +161,10 @@ button#add-cart:hover {
   background-size: cover;
 }
 
+// Gallery
+
+// Carousel
+
 .carousel-control-prev,
 .carousel-control-next {
   top: auto;
@@ -170,3 +178,17 @@ button#add-cart:hover {
 .carousel-control-next {
   bottom: 200px;
 }
+
+// Carousel
+
+// Table
+
+#border-thead {
+  border-bottom: 2px solid $primary;
+}
+
+tr {
+  border-color: #a5a8ae;
+}
+
+// Table
