@@ -1,24 +1,28 @@
-$primary: #6171fa;
-$dark: #20202c;
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 .muted {
   color: #a5a8ae;
 }
 
 .text-brand {
-  color: $primary;
+  color: #6171fa;
 }
 
 .btn-main {
-  background-color: $primary;
+  background-color: #6171fa;
 }
 
 .bg-main {
-  background-color: $primary;
+  background-color: #6171fa;
 }
 
 a {
-  color: $primary;
+  color: #6171fa;
 }
 
 body {
@@ -43,16 +47,16 @@ body {
   width: 50px;
   height: 50px;
 }
+
 /* Navbar end */
-
 /* Affix menu start */
-
 .navbar-collapse {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 /* Affix menu end */
-
 /* Hero section */
 .display-3 {
   text-align: left;
@@ -69,21 +73,35 @@ body {
 
 .hero {
   height: 92vh;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#20202c),
+    color-stop(50%, rgba(100, 113, 250, 0.2)),
+    to(#20202c)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    #20202c,
+    rgba(100, 113, 250, 0.2) 50%,
+    #20202c 100%
+  );
   background-image: linear-gradient(
     to right,
-    $dark,
+    #20202c,
     rgba(100, 113, 250, 0.2) 50%,
-    $dark 100%
+    #20202c 100%
   );
   background-position: center;
   background-repeat: no-repeat;
   z-index: 100;
-  h1,
-  h3,
-  button,
-  img {
-    z-index: 10;
-  }
+}
+.hero h1,
+.hero h3,
+.hero button,
+.hero img {
+  z-index: 10;
 }
 
 #add-cart {
@@ -92,22 +110,42 @@ body {
 
 button#add-cart:hover,
 .btn:hover {
+  -webkit-animation: pulse 1s infinite;
   animation: pulse 1s infinite;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 @keyframes pulse {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
   70% {
+    -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
   100% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
-
 #circle {
   width: 35px;
 }
@@ -116,7 +154,7 @@ button#add-cart:hover,
   background-color: #20202c;
   padding: 50px;
   font-size: 25vw;
-  color: #414153d3;
+  color: rgba(65, 65, 83, 0.8274509804);
   position: absolute;
   left: -50px;
   z-index: 1;
@@ -128,19 +166,18 @@ button#add-cart:hover,
 }
 
 /* Hero section */
-
-// Form
 .form-control {
-  background-color: $dark;
+  background-color: #20202c;
   border-radius: 0;
   border: 0;
 }
 
 .form-control:focus {
   color: white;
-  background-color: $dark;
+  background-color: #20202c;
   outline: 0;
-  box-shadow: 0 0 0 0.15rem rgb(97 113 250 / 25%);
+  -webkit-box-shadow: 0 0 0 0.15rem rgba(97, 113, 250, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(97, 113, 250, 0.25);
 }
 
 .btn-primary {
@@ -148,23 +185,24 @@ button#add-cart:hover,
 }
 
 .jumbotron {
-  background-color: $dark !important;
+  background-color: #20202c !important;
   padding: 50px 0;
 }
-
-// Gallery
 
 .grid-image-1 {
   background-image: url('/img/1.jfif');
 }
+
 .grid-image-2 {
   background-image: url('/img/2.jfif');
 }
+
 .grid-image-3 {
   background-image: url('/img/3.jfif');
 }
+
 .grid-image-4 {
-  background-image: url('/img/hero\ image.jfif');
+  background-image: url('/img/hero image.jfif');
 }
 
 .grid-image-1,
@@ -175,10 +213,6 @@ button#add-cart:hover,
   height: auto;
   background-size: cover;
 }
-
-// Gallery
-
-// Carousel
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -194,16 +228,10 @@ button#add-cart:hover,
   bottom: 200px;
 }
 
-// Carousel
-
-// Table
-
 #border-thead {
-  border-bottom: 2px solid $primary;
+  border-bottom: 2px solid #6171fa;
 }
 
 tr {
   border-color: #a5a8ae;
 }
-
-// Table
