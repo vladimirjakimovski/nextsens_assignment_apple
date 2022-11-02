@@ -1,30 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-.muted {
-  color: #a5a8ae;
-}
-
-.text-brand {
-  color: #6171fa;
-}
-
-.btn-main {
-  background-color: #6171fa;
-}
-
-.bg-main {
-  background-color: #6171fa;
-}
-
-a {
-  color: #6171fa;
-}
-
 body {
   font-family: 'Nunito', sans-serif;
   width: 100%;
@@ -33,75 +6,23 @@ body {
   background-color: #272731;
 }
 
-/* Navbar start */
-.navbar {
-  padding-left: 60px;
-  padding-right: 60px;
+.bg-main {
+  background-color: #6171fa;
 }
 
-.dropdown-toggle::after {
-  content: none;
+.dark-blue-bg {
+  background-color: #20202c !important;
 }
 
-.navbar-brand img {
-  width: 50px;
-  height: 50px;
+/* buttons start */
+
+.btn-primary {
+  color: white;
+  background-color: #6171fa;
 }
 
-/* Navbar end */
-/* Affix menu start */
-.navbar-collapse {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-/* Affix menu end */
-/* Hero section */
-.display-3 {
-  text-align: left;
-  font-weight: 800;
-}
-
-.display-4 {
-  font-weight: 700;
-}
-
-.sticky-nav {
-  height: 8vh;
-}
-
-.hero {
-  height: 92vh;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#20202c),
-    color-stop(50%, rgba(100, 113, 250, 0.2)),
-    to(#20202c)
-  );
-  background-image: -o-linear-gradient(
-    left,
-    #20202c,
-    rgba(100, 113, 250, 0.2) 50%,
-    #20202c 100%
-  );
-  background-image: linear-gradient(
-    to right,
-    #20202c,
-    rgba(100, 113, 250, 0.2) 50%,
-    #20202c 100%
-  );
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 100;
-}
-.hero h1,
-.hero h3,
-.hero button,
-.hero img {
-  z-index: 10;
+#circle {
+  width: 35px;
 }
 
 #add-cart {
@@ -112,60 +33,126 @@ button#add-cart:hover,
 .btn:hover {
   -webkit-animation: pulse 1s infinite;
   animation: pulse 1s infinite;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #6171fa !important;
+}
+
+/* buttons end */
+
+/* font styling start */
+
+.muted {
+  color: #a5a8ae;
+}
+
+.text-brand {
+  color: #6171fa;
+}
+
+a {
+  color: #6171fa;
+}
+
+a:hover {
+  color: white;
 }
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
+
   70% {
-    -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
+
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
 
 @keyframes pulse {
   0% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
+
   70% {
-    -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
+
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
-#circle {
-  width: 35px;
+
+/* font styling end */
+
+/* Navbar start */
+.navbar {
+  max-height: 10vh;
+  min-height: 10vh;
+  z-index: 2;
 }
 
-.shadow-heading {
-  background-color: #20202c;
-  padding: 50px;
-  font-size: 25vw;
-  color: rgba(65, 65, 83, 0.8274509804);
-  position: absolute;
-  left: -50px;
-  z-index: 1;
-  opacity: 0.2;
+.dropdown-toggle::after {
+  content: none;
 }
 
 .dropdown-menu[data-bs-popper] {
   left: -100px;
 }
 
-/* Hero section */
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Navbar end */
+
+/* Affix menu start */
+
+.sticky-nav {
+  height: 8vh;
+}
+
+/* Affix menu end */
+
+/* Hero section start */
+
+#top-nav,
+.hero {
+  background-image: linear-gradient(
+    to right,
+    #20202c,
+    rgba(100, 113, 250, 0.2) 50%,
+    #20202c 100%
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  max-height: 90vh;
+  min-height: 90vh;
+}
+
+.shadow-heading {
+  background-color: #20202c;
+  font-size: 25vw;
+  color: rgba(65, 65, 83, 0.8274509804);
+  position: absolute;
+  left: -50px;
+  top: 10%;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+/* Hero section end */
+
+/* Inputs start */
 .form-control {
   background-color: #20202c;
   border-radius: 0;
@@ -174,45 +161,14 @@ button#add-cart:hover,
 
 .form-control:focus {
   color: white;
-  background-color: #20202c;
+  background-color: #272731;
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.15rem rgba(97, 113, 250, 0.25);
   box-shadow: 0 0 0 0.15rem rgba(97, 113, 250, 0.25);
 }
 
-.btn-primary {
-  color: white;
-}
+/* Inputs end */
 
-.jumbotron {
-  background-color: #20202c !important;
-  padding: 50px 0;
-}
-
-.grid-image-1 {
-  background-image: url('/img/1.jfif');
-}
-
-.grid-image-2 {
-  background-image: url('/img/2.jfif');
-}
-
-.grid-image-3 {
-  background-image: url('/img/3.jfif');
-}
-
-.grid-image-4 {
-  background-image: url('/img/hero image.jfif');
-}
-
-.grid-image-1,
-.grid-image-2,
-.grid-image-3,
-.grid-image-4 {
-  width: 100%;
-  height: auto;
-  background-size: cover;
-}
+/* Carousel start */
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -228,6 +184,10 @@ button#add-cart:hover,
   bottom: 200px;
 }
 
+/* Carousel end */
+
+/* borders start */
+
 #border-thead {
   border-bottom: 2px solid #6171fa;
 }
@@ -235,3 +195,9 @@ button#add-cart:hover,
 tr {
   border-color: #a5a8ae;
 }
+
+.border-start {
+  border-color: #6171fa !important;
+}
+
+/* borders ned */
