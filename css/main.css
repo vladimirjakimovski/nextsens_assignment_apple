@@ -157,6 +157,7 @@ a:hover {
   background-color: #20202c;
   border-radius: 0;
   border: 0;
+  color: white;
 }
 
 .form-control:focus {
